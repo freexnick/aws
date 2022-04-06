@@ -1,4 +1,3 @@
-from email.policy import Policy
 import json
 import boto3
 from pprint import pprint

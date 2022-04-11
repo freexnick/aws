@@ -1,6 +1,4 @@
-from multiprocessing.connection import Client
 import boto3
-
 from botocore.exceptions import ClientError
 
 s3 = boto3.client('s3')
@@ -16,4 +14,4 @@ def get_webendpoint(bucket_name):
 
 
 if __name__ == '__main__':
-    get_webendpoint('demo.btu-nk-2022.com',)
+    get_webendpoint('demo.btu-nk-2022.com')

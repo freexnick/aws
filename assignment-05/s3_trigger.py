@@ -23,7 +23,7 @@ def s3_trigger(bucket_name, function_name):
     for extension in file_extensions:
         lambda_foreach.append({
             'LambdaFunctionArn': client.get_function(
-                FunctionName='lambda-image-processor')['Configuration']['FunctionArn'],
+                FunctionName=function_name)['Configuration']['FunctionArn'],
             'Events': [
                 's3:ObjectCreated:*'
             ],
